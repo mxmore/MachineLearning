@@ -1,4 +1,4 @@
-# 梯度下降法
+# [梯度下降法](https://mp.weixin.qq.com/s/IAkVWrWGMZCGAwxIhRysLw)
 
 **前言** ：入门机器学习必须了解梯度下降法，虽然梯度下降法不直接在机器学习里使用，但是它的思维方式是后续学习其他算法的基础。网上已有的文章要么整一堆数学公式，要么就是简单草草了事。本篇文章用讲解+实战的形式，浅显易懂讲解，拥有高中数学知识即可看懂。
 
@@ -140,7 +140,7 @@ def gradient_descent():
     ax.plot(x_axis,fx(x_axis)) #作图
   
     for i in range(times):
-        x1 = x      
+        x1 = x  
         y1= fx(x)  
         print("第%d次迭代：x=%f，y=%f" % (i + 1, x, y1))
         x = x - alpha * 2 * x
@@ -184,8 +184,8 @@ def gradient_descent():
     fig.plot_surface(axis_x, axis_y, z, rstride=1, cstride=1, cmap=plt.get_cmap('rainbow')) #作出底图
   
     for i in range(times):
-        x1 = x    
-        y1 = y     
+        x1 = x  
+        y1 = y   
         f1 = fx(x, y)  
         print("第%d次迭代：x=%f，y=%f，fxy=%f" % (i + 1, x, y, f1))
         x = x - alpha * 2 * (x - 10)
@@ -199,8 +199,6 @@ if __name__ == "__main__":
 ```
 
 ![img](./image/notebook/1650854515619.png)
-
-
 
 ### 3.3 根据给定样本求解出最佳θ组合
 
@@ -263,8 +261,6 @@ plt.plot(x,y_predict,color = 'red')#绘制拟合的函数图
 plt.show()
 ```
 
-
 ![](image/notebook/1650854627296.png)
-
 
 本篇文章前半部分通俗易懂地将整个梯度下降算法全面地讲解了一遍，后半部分通过Python将整个算法实现了一遍
